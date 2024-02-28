@@ -1,0 +1,17 @@
+.gallery{
+    &__item {
+        display: block;
+        width: 307px;
+        height: auto;
+        filter: grayscale(1);
+        cursor: pointer;
+        transition: {
+            property: filter;
+            duration: 0.9s;
+        };
+
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+}

@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import pic from './AllPic';
+import './app.scss';
+import Gallery from "./Gallery";
+import ModalWindow from './ModalWindow';
+import {useState} from 'react';
 
 function App() {
+  
+  const [modal, setModal] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Gallery setModal = {setModal} />
+      <ModalWindow modal = {modal} setModal = {setModal} pic = {pic}/>
+    </>
   );
 }
 
-export default App;
+export default App
